@@ -1,0 +1,11 @@
+# Install this in /etc/udev/hwdb.d/
+keyboard:dmi:bvn*:bvr*:bd*:svnAcer*:pn*
+keyboard:dmi:bvn*:bvr*:bd*:svnGateway*:pnA0A1*:pvr*
+keyboard:dmi:bvn*:bvr*:bd*:svneMachines:pneMachines*E725:pvr*
+ KEYBOARD_KEY_ce=end
+ KEYBOARD_KEY_ef=home
+ KEYBOARD_KEY_ae=pagedown
+ KEYBOARD_KEY_b0=pageup
+ KEYBOARD_KEY_cf=brightnessup
+ KEYBOARD_KEY_c7=brightnessdown
+

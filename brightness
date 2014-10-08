@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+
+# Add this line to the sudoers file:
+# <user> <host> = (root) NOPASSWD: <path to this file>
+
+import os
+import sys
+
+BRIGHTNESS_MAX=976
+BRIGHTNESS_MIN=0
+DEVICE="/sys/class/backlight/intel_backlight/brightness"
+
+def main():
+    if len(sys.argv) < 2:
+        print("Not enough arguments.")
+        sys.exit(1)
+
+    sign_change = 1 if sys.argv[1] == "up" else -1
+
+    with open(DEVICE, "r") as f:
+        current_val = int(f.read())
+        diff = (BRIGHTNESS_MAX - BRIGHTNESS_MIN) // 10
+        new_val = current_val + sign_change * diff
+        new_val = max(0, new_val)
+        new_val = min(new_val, BRIGHTNESS_MAX)
+
+    with open(DEVICE, "w") as f:
+        f.write(str(new_val))
+
+if __name__ == "__main__":
+    main()
