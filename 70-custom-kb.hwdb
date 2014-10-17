@@ -2,10 +2,10 @@
 keyboard:dmi:bvn*:bvr*:bd*:svnAcer*:pn*
 keyboard:dmi:bvn*:bvr*:bd*:svnGateway*:pnA0A1*:pvr*
 keyboard:dmi:bvn*:bvr*:bd*:svneMachines:pneMachines*E725:pvr*
- KEYBOARD_KEY_ce=end
- KEYBOARD_KEY_ef=home
- KEYBOARD_KEY_ae=pagedown
- KEYBOARD_KEY_b0=pageup
- KEYBOARD_KEY_cf=brightnessup
- KEYBOARD_KEY_c7=brightnessdown
+ KEYBOARD_KEY_ce=end # BrightnessUp -> End
+ KEYBOARD_KEY_ef=home # BrightnessDown -> Home
+ KEYBOARD_KEY_ae=pagedown # VolumeUp -> PageUp
+ KEYBOARD_KEY_b0=pageup # VolumeDown -> PageDown
+ KEYBOARD_KEY_d1=right # PageDown -> Right
+ KEYBOARD_KEY_c9=left # PageUp -> Left
 
